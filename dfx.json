@@ -1,0 +1,13 @@
+{
+  "canisters": {
+    "auth": {
+      "type": "motoko",
+      "main": "src/auth/auth.mo"
+    },
+    "inventory": {
+      "type": "motoko",
+      "main": "src/inventory/inventory.mo",
+      "dependencies": ["auth"]
+    }
+  }
+}
