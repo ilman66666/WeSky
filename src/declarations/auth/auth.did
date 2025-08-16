@@ -1,4 +1,0 @@
-service : {
-  hasAccess: (user: principal, modul: text) -> (bool) query;
-  subscribeUser: (user: principal, modules: vec text) -> ();
-}
