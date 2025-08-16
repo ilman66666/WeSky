@@ -1,0 +1,21 @@
+type TransactionRecord = record {
+  id : nat;
+  description : text;
+  amount : nat;
+  createdBy : principal;
+  timestamp : int;
+  deadline : opt int;
+  updatedAt : opt int;
+  transactionType : opt text;
+  status : opt text;
+};
+
+service : {
+  addTransaction : (text, nat, opt text, opt int) -> (text);
+  listTransactions : () -> (vec TransactionRecord) query;
+  updateTransactionStatus : (nat, text) -> (text);
+  updateTransactionType : (nat, text) -> (text);
+  updateDescription : (nat, text) -> (text);
+  updateAmount : (nat, nat) -> (text);
+  updateDeadline : (nat, int) -> (text);
+}

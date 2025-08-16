@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "auth": {
+      "type": "motoko",
+      "main": "src/auth/auth.mo"
+    },
+    "transaction": {
+      "type": "motoko",
+      "main": "src/transaction/transaction.mo",
+      "dependencies": [
+        "auth"
+      ]
+    },
+    "tax": {
+      "type": "motoko",
+      "main": "src/tax/tax.mo",
+      "dependencies": [
+        "auth"
+      ]
+    },
+    "payments": {
+      "type": "motoko",
+      "main": "src/payments/payments.mo",
+      "dependencies": [
+        "auth"
+      ]
+    }
+  }
+}
